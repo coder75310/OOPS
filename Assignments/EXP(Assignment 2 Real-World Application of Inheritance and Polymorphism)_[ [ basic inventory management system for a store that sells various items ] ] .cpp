@@ -1,39 +1,3 @@
-/* QUESTION
-Problem Statement:
-
-You are building a basic inventory management system for a store that sells various items. In this system, we will represent products using a hierarchy of classes.
-
-Base Class: Product
-
-Create a base class Product with the following attributes:
-productID (int): The unique ID for the product.
-name (string): The name of the product.
-price (float): The price of the product.
-Add the following member functions:
-A constructor that initializes productID, name, and price.
-A virtual function displayProductDetails() that prints the details of the product.
-Derived Class: Electronics
-
-Create a derived class Electronics that inherits from Product.
-Add additional attributes specific to electronics:
-warrantyPeriod (int): The warranty period in years.
-Override the displayProductDetails() function to include the warranty period of the electronic product.
-Derived Class: Furniture
-
-Create another derived class Furniture that also inherits from Product.
-Add additional attributes specific to furniture:
-materialType (string): The type of material used (e.g., wood, metal).
-Override the displayProductDetails() function to include the type of material used for the furniture.
-Demonstrate Polymorphism:
-
-In the main function, create an array of pointers to Product and populate it with objects of Electronics and Furniture.
-Iterate through the array and call the displayProductDetails() method for each object, demonstrating runtime polymorphism.
-Expected Output:
-Product Info: ID = 101, Name = Smartphone, Price = 500.00, Warranty = 2 years Product Info: ID = 202, Name = Sofa, Price = 300.00, Material = Wood
- */
-
-
-
 #include <iostream>
 #include <vector>
 using namespace std;
