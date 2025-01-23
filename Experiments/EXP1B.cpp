@@ -4,7 +4,7 @@ using namespace std;
 // Function prototypes
 void deposit(float &balance);
 void withdraw(float &balance);
-void checkBalance(float balance);
+void checkBalance(float &balance);
 
 int main() {
     float balance = 0.0;
