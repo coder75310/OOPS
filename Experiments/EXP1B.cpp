@@ -6,6 +6,37 @@ void deposit(float &balance);
 void withdraw(float &balance);
 void checkBalance(float &balance);
 
+// Function to deposit money
+void deposit(float &balance) {
+    float amount;
+    cout << "Enter amount to deposit: ";
+    cin >> amount;
+    if (amount > 0) {
+        balance += amount;
+        cout << "Amount deposited: " << amount << endl;
+    } else {
+        cout << "Invalid amount!" << endl;
+    }
+}   
+
+// Function to withdraw money
+void withdraw(float &balance) {
+    float amount;
+    cout << "Enter amount to withdraw: ";
+    cin >> amount;
+    if (amount > 0 && amount <= balance) {
+        balance -= amount;
+        cout << "Amount withdrawn: " << amount << endl;
+    } else {
+        cout << "Invalid amount or insufficient funds!" << endl;
+    }
+}
+
+// Function to check the balance
+void checkBalance(float balance) {
+    cout << "Current balance: " << balance << endl;
+}
+
 int main() {
     float balance = 0.0;
     int choice;
@@ -38,35 +69,4 @@ int main() {
     } while (choice != 4);
 
     return 0;
-}
-
-// Function to deposit money
-void deposit(float &balance) {
-    float amount;
-    cout << "Enter amount to deposit: ";
-    cin >> amount;
-    if (amount > 0) {
-        balance += amount;
-        cout << "Amount deposited: " << amount << endl;
-    } else {
-        cout << "Invalid amount!" << endl;
-    }
-}   
-
-// Function to withdraw money
-void withdraw(float &balance) {
-    float amount;
-    cout << "Enter amount to withdraw: ";
-    cin >> amount;
-    if (amount > 0 && amount <= balance) {
-        balance -= amount;
-        cout << "Amount withdrawn: " << amount << endl;
-    } else {
-        cout << "Invalid amount or insufficient funds!" << endl;
-    }
-}
-
-// Function to check the balance
-void checkBalance(float balance) {
-    cout << "Current balance: " << balance << endl;
 }
