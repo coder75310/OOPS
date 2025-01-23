@@ -56,7 +56,6 @@ public:
         return cost;
     }
 
-private:
     double calculateGroundCost(double weight) {
         if (weight <= 1.0) {
             return 5 + (2 * weight);
